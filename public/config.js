@@ -13,7 +13,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_ENABLE_ABSTRACT_WALLET": "false",
   "VITE_DISABLE_EVM_WALLETS": "false",
   "VITE_DISABLE_SOLANA_WALLETS": "false",
-  "VITE_WALLETCONNECT_PROJECT_ID": "IDX Perps",
+  "VITE_WALLETCONNECT_PROJECT_ID": "9d96f7dab389c7bddadc1c53ed61cc48",
   "VITE_APP_NAME": "IDX",
   "VITE_APP_DESCRIPTION": "Trade perpetual futures on IDX Perps DEX. Multi-chain perps on Solana, Base, Arbitrum and more — wallet-funded, shared liquidity, built for the IDX ecosystem.",
   "VITE_HAS_PRIMARY_LOGO": "true",
