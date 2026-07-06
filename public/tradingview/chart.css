@@ -77,3 +77,14 @@ div[data-section-name='extendLeftTradingLine'] {
     --tv-color-platform-background: #16141c;
     --tv-color-pane-background: #16141c;
 }
+
+/* Show drawing toolbar by default (Orderly SDK enables hide_left_toolbar_by_default) */
+.layout__area--left {
+    display: block !important;
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
