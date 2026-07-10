@@ -21,7 +21,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_ENABLED_MENUS": "Trading,Portfolio,Markets,Swap",
   "VITE_CUSTOM_MENUS": "Launchlab, https://tools.idxsolana.io/idx-launchlab/live",
   "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "false",
-  "VITE_ENABLE_CAMPAIGNS": "false",
+  "VITE_ENABLE_CAMPAIGNS": "true",
   "VITE_TELEGRAM_URL": "https://t.me/IDXSOL",
   "VITE_DISCORD_URL": "https://discord.gg/T5cMArBv",
   "VITE_TWITTER_URL": "",
