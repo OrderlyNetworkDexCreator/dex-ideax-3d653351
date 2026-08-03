@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, lazy, Suspense } from "react";
+import { ReactNode, useCallback, lazy, Suspense, useMemo } from "react";
 import { OrderlyAppProvider } from "@orderly.network/react-app";
 import type { NetworkId } from "@orderly.network/types";
 import { DemoGraduationChecker } from "@/components/DemoGraduationChecker";
@@ -10,6 +10,7 @@ import {
   getRuntimeConfig,
 } from "@/utils/runtime-config";
 import { createSymbolDataAdapter } from "@/utils/symbol-filter";
+import { resolveDexThemeConfig } from "@/utils/theme-config";
 import ServiceDisclaimerDialog from "./ServiceDisclaimerDialog";
 import { OrderlyLocaleProvider } from "./orderlyLocaleProvider";
 
@@ -48,6 +49,7 @@ const WalletConnector = lazy(
 const OrderlyProvider = (props: { children: ReactNode }) => {
   const config = useOrderlyConfig();
   const networkId = getNetworkId();
+  const themes = useMemo(() => resolveDexThemeConfig().themes, []);
 
   const privyAppId = getRuntimeConfig("VITE_PRIVY_APP_ID");
   const usePrivy = !!privyAppId;
@@ -118,6 +120,7 @@ const OrderlyProvider = (props: { children: ReactNode }) => {
     <OrderlyAppProvider
       brokerId={getRuntimeConfig("VITE_ORDERLY_BROKER_ID")}
       brokerName={getRuntimeConfig("VITE_ORDERLY_BROKER_NAME")}
+      themes={themes}
       networkId={networkId}
       onChainChanged={onChainChanged}
       appIcons={config.orderlyAppProvider.appIcons}
